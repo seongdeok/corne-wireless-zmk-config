@@ -16,10 +16,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <250>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
 
         hmr_mo: hmr_mo {
@@ -32,6 +32,16 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
+        };
+        hms: homerow_mods_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";          // tap-preferred 쓰지 말것
+            tapping-term-ms = <150>;      // shift는 더 짧게
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <80>; // 낮게 설정
+            hold-trigger-on-release;       // 이게 핵심
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -48,7 +58,7 @@
             display-name = "Base";
             bindings = <
 &kp TAB         &kp Q         &kp W            &kp E            &kp R              &kp T        &kp Y    &kp U              &kp I            &kp O            &kp P                   &kp BSPC
-&hmr_mo 1 ESC   &hmr LCTRL A  &hmr LEFT_WIN S  &hmr LEFT_ALT D  &hmr LEFT_SHIFT F  &kp G        &kp H    &hmr LEFT_SHIFT J  &hmr LEFT_ALT K  &hmr LEFT_GUI L  &hmr LEFT_CONTROL SEMI  &kp SQT
+&hmr_mo 1 ESC   &hmr LCTRL A  &hmr LEFT_WIN S  &hmr LEFT_ALT D  &hms LEFT_SHIFT F  &kp G        &kp H    &hms LEFT_SHIFT J  &hmr LEFT_ALT K  &hmr LEFT_GUI L  &hmr LEFT_CONTROL SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z         &kp X            &kp C            &kp V              &kp B        &kp N    &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp RIGHT_SHIFT
                                                &kp LGUI         &mo 3              &kp SPACE    &kp RET  &mo 2              &kp LEFT_ALT
             >;
