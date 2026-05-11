@@ -36,7 +36,7 @@
         hms: homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";          // tap-preferred 쓰지 말것
+            flavor = "tap-preferred";          
             tapping-term-ms = <150>;      // shift는 더 짧게
             quick-tap-ms = <175>;
             require-prior-idle-ms = <80>; // 낮게 설정
