@@ -16,10 +16,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <250>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
         };
 
         hmr_mo: hmr_mo {
@@ -28,19 +28,19 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <200>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <75>;
+            flavor = "hold-preferred";
         };
         hms: homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";          
-            tapping-term-ms = <200>;      // shift는 더 짧게
+            flavor = "balanced";          
+            tapping-term-ms = <175>;      // shift는 더 짧게
             quick-tap-ms = <175>;
             require-prior-idle-ms = <100>; // 낮게 설정
-            hold-trigger-on-release;       // 이게 핵심
+            
             bindings = <&kp>, <&kp>;
         };
     };
