@@ -96,7 +96,21 @@
                                        &kp LGUI      &trans        &kp SPACE     &kp RET    &trans     &kp RALT
             >;
         };
+        number_layer {
 
+            display-name = "Number";
+            // ┌────────┬────────┬────────┬────────┬────────┬────────┐                        ┌────────┬────────┬────────┬────────┬────────┬────────┐
+            // │ trans  │ trans  │ trans  │ trans  │ trans  │ trans  │                        │ trans  │   7    │   8    │   9    │ trans  │ trans  │
+            // │ trans  │  LEFT  │  DOWN  │   UP   │ RIGHT  │ trans  │                        │ trans  │   4    │   5    │   6    │ trans  │ trans  │
+            // │ trans  │ trans  │ trans  │ trans  │ trans  │ trans  │ trans  │      │ trans  │   0    │   1    │   2    │   3    │  DOT   │ trans  │
+            //          │ trans  │ trans  │ trans  │ trans  │ trans  │ trans  │      │ trans  │ trans  │ trans  │ trans  │ trans  │
+            bindings = <
+&trans  &trans    &trans    &trans       &trans     &trans                        &trans        &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &trans   &trans
+&trans  &kp LEFT  &kp DOWN  &kp UP_ARROW &kp RIGHT  &trans                        &trans        &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &trans   &trans
+&trans  &trans    &trans    &trans       &trans     &trans  &trans      &trans    &kp NUMBER_0  &kp N1       &kp N2       &kp N3       &kp DOT  &trans
+        &trans    &trans    &trans       &trans     &trans  &trans      &trans    &trans        &trans       &trans       &trans       &trans
+            >;
+        };
         mouse_layer {
             bindings = <
 &trans  &trans    &trans    &trans        &trans     &trans       &trans          &trans          &trans        &trans           &trans   &trans
