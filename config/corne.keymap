@@ -65,7 +65,7 @@
             >;
         };
 
-        lower_layer {
+        nav_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -81,7 +81,7 @@
             >;
         };
 
-        raise_layer {
+        symbol_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -97,7 +97,7 @@
             >;
         };
 
-        layer_4 {
+        mouse_layer {
             bindings = <
 &trans  &trans    &trans    &trans        &trans     &trans       &trans          &trans          &trans        &trans           &trans   &trans
 &trans  &trans    &trans    &trans        &trans     &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans   &trans
@@ -105,19 +105,19 @@
                             &trans        &trans     &trans       &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
-        layer_5 {
+        func_layer {
             bindings = <
+&trans  &kp F1    &kp F2    &kp F3        &kp F4     &kp F5       &kp F6        &kp F7        &kp F8        &kp F9        &kp F10  &trans
 &trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
-&trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
-&trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
+&trans  &kp LA(Z) &trans    &kp LA(C)     &kp LA(V)  &trans       &trans        &trans        &trans        &trans        &trans   &trans
                             &trans        &trans     &trans       &trans        &trans        &trans
             >;
         };
-        layer_6 {
+        media_layer {
             bindings = <
 &trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
-&trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
-&trans  &trans    &trans    &trans        &trans     &trans       &trans        &trans        &trans        &trans        &trans   &trans
+&trans  &trans    &trans    &trans        &trans     &trans       &trans        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &trans   &trans
+&trans  &trans    &trans    &trans        &trans     &trans       &kp C_PREV    &kp C_PP      &kp C_PLAY    &kp C_NEXT       &trans   &trans
                             &trans        &trans     &trans       &trans        &trans        &trans
             >;
         };
