@@ -47,7 +47,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <100>;
             flavor = "balanced";
-            hold-trigger-key-positions = <RIGHT_KEYS>;
+            hold-trigger-key-positions = <RIGHT_KEYS LEFT_THUMBS>;
         };
         hmr_r: hmr_r {
             compatible = "zmk,behavior-hold-tap";
@@ -59,7 +59,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <100>;
             flavor = "balanced";
-            hold-trigger-key-positions = <LEFT_KEYS>;
+            hold-trigger-key-positions = <LEFT_KEYS RIGHT_THUMBS>;
         };
         hmr_mo: hmr_mo {
             compatible = "zmk,behavior-hold-tap";
